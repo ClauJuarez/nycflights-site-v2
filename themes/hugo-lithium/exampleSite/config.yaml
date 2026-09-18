@@ -1,0 +1,42 @@
+baseurl: "/"
+locale: "en-US"
+title: "A Hugo website"
+theme: "hugo-lithium"
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+
+permalinks:
+  post: "/:year/:month/:day/:slug/"
+
+menu:
+  main:
+    - name: About
+      url: "/about/"
+    - name: GitHub
+      url: "https://github.com/rstudio/blogdown"
+    - name: Twitter
+      url: "https://twitter.com/rstudio"
+
+params:
+  description: "A website built through Hugo and blogdown."
+  highlightjsVersion: "9.12.0"
+  highlightjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  highlightjsLang: ["r", "yaml"]
+  highlightjsTheme: "github"
+  MathJaxCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  MathJaxVersion: "2.7.5"
+  favicon: "favicon.ico"
+  logo:
+    url: "logo.png"
+    width: 50
+    height: 50
+    alt: "Logo"
+
+security:
+  allowContent: ['.*']
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: false

@@ -1,0 +1,53 @@
+---
+title: Los retrasos amentan conforme avanza el día
+author: ''
+date: '2026-09-17'
+slug: los-retrasos-amentan-conforme-avanza-el-d-a
+categories: []
+tags: []
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(ggplot2)
+library(nycflights13)
+```
+
+## ¿Existe un patrón durante el día?
+
+Para responderlo calculamos el retraso promedio de salida según la hora
+programada del vuelo.
+
+```{r, echo= FALSE}
+delay_hour <- flights |>
+  filter(!is.na(dep_delay)) |>
+  group_by(hour) |>
+  summarise(
+    retraso_promedio = mean(dep_delay),
+    vuelos = n(),
+    .groups = "drop"
+  )
+```
+
+```{r, echo= FALSE}
+ggplot(delay_hour, aes(hour, retraso_promedio)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Los retrasos tienden a aumentar durante el día",
+    x = "Hora programada de salida",
+    y = "Retraso promedio (min)"
+  ) +
+  theme_minimal()
+```
+
+## Interpretación
+
+El retraso promedio tiende a aumentar conforme avanza el día.
+
+Esto es consistente con la posibilidad de que retrasos anteriores se acumulen
+durante la operación, aunque el patrón observado no demuestra por sí mismo
+una relación causal.
+
+
+
