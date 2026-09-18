@@ -1,7 +1,7 @@
 baseurl: "/"
 locale: "en-US"
 title: "NYC Flights"
-theme: "hugo-lithium"
+theme: "hugo-PaperMod"
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 
 permalinks:
@@ -12,7 +12,7 @@ menu:
     - name: About
       url: "/about/"
     - name: GitHub
-      url: "https://github.com/rstudio/blogdown"
+      url: "https://github.com/ClauJuarez/nycflights-site-v2"
 
 params:
   description: "."
