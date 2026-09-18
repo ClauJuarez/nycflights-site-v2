@@ -594,6 +594,8 @@ Sign up
 
 Puedes registrarte utilizando tu cuenta de GitHub.
 
+---
+
 # 23. Importar el proyecto desde GitHub
 
 Desde el panel de Netlify selecciona:
@@ -606,6 +608,8 @@ Selecciona `GitHub`. Autoriza a Netlify para acceder a tus repositorios.
 
 Selecciona `nycflights-blogdown`
 
+---
+
 # 24. Revisar la configuración de despliegue
 
 Comprueba:
@@ -617,6 +621,9 @@ Publish directory: public
 ```
 
 Si existe netlify.toml, Netlify normalmente leerá esos valores automáticamente.
+
+---
+
 
 # 25. Publicar
 
@@ -640,6 +647,9 @@ publica public/
 
 Sólo el contenido del directorio de publicación es desplegado por Netlify.
 
+---
+
+
 # 26. Abrir el sitio publicado
 
 Cuando el despliegue termine, Netlify mostrará una dirección similar a:
@@ -651,6 +661,8 @@ https://nombre-aleatorio.netlify.app
 Haz clic en esa dirección.
 
 Tu sitio ya está publicado.
+
+---
 
 # 27. Flujo para realizar cambios posteriormente
 
@@ -671,6 +683,8 @@ git commit -m "Update flight analysis"
 git push
 
 Netlify detectará el nuevo commit, reconstruirá el sitio y publicará automáticamente la nueva versión.
+
+---
 
 # 28. Cambiar el tema
 
