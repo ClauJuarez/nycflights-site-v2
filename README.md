@@ -677,10 +677,12 @@ El flujo cotidiano será:
 
 En Terminal:
 
+```{bash}
 git status
 git add .
 git commit -m "Update flight analysis"
 git push
+```
 
 Netlify detectará el nuevo commit, reconstruirá el sitio y publicará automáticamente la nueva versión.
 
@@ -690,32 +692,38 @@ Netlify detectará el nuevo commit, reconstruirá el sitio y publicará automát
 
 Los temas de Hugo pueden consultarse en:
 
+```{text}
 https://themes.gohugo.io
+```
 
 Por ejemplo, para instalar PaperMod:
 
 ```{r}
-blogdown::install_theme(
-  "adityatelange/hugo-PaperMod"
-)
+blogdown::install_theme("adityatelange/hugo-PaperMod")
 ```
 
 Revisa después `config.yaml` y comprueba el valor de `theme`.
 
 Después reinicia el servidor:
 
+```{r}
 blogdown::stop_server()
 blogdown::serve_site()
+```
 
 Cuando esté correcto:
 
+```{r}
 blogdown::stop_server()
 blogdown::build_site()
+```
 
 Después:
 
+```{bash}
 git add .
 git commit -m "Change site theme"
 git push
+```
 
 Netlify publicará automáticamente la nueva versión.
